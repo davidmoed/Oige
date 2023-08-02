@@ -15,7 +15,7 @@
     
     .HomepageSectionCont {
         height: 100vh;
-        margin: 92px 0;
+        margin: 46px 0;
     }
     
     .HomepageCTACont {
@@ -33,6 +33,20 @@
     padding-top: 92px;
 }
 
+/* Light section */
+.LightSectionCont {
+    height: 100%;
+    color: $dark;
+    background-color: $light;
+
+    .LightSectionImgCont {
+        
+        img {
+            max-width: 100%;
+            height: 100%;
+        }
+    }
+}
 
 /* Splash section */
 .HomepageSplashCont {
@@ -56,3 +70,4 @@
 .SplashButton {
     @include filled-button($green-cta)
 }
+

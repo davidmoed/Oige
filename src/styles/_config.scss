@@ -15,6 +15,9 @@ $body-color: $light;
 $body-bg: $dark;
 $font-family-sans-serif: "Urbanist";
 
+// enable full width navbar with edge padding
+$navbar-padding-x: 2rem;
+
 /* Mixins*/
 
 @mixin border-button {
