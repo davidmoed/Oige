@@ -1,9 +1,8 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
-from tasks import fetch_car_details, save_car_details, save_form_data, fetch_insurance_quote, fetch_travel_insurance_quote
+from .tasks import fetch_car_details, save_form_data, fetch_insurance_quote, fetch_travel_insurance_quote
 from rest_framework.response import Response
 from rest_framework import status
-import redis
 
 class Home(APIView):
     def get(self, request):
@@ -17,7 +16,7 @@ class Contact(APIView):
     def get(self, request):
         return render(request, 'contact.html')
     
-class CarDetails(APIView):
+class CarDetailsForARK(APIView):
     
     def post(self, request):
         registration = request.data.get('registration')
