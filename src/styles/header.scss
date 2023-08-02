@@ -1,0 +1,39 @@
+@import "./config";
+
+
+.navBarCont {
+    min-height: 120px;
+    margin: 0 24px;
+    background-color: $dark;
+
+    .navbar-brand, .nav-link {
+        color: $light;
+    }
+    .navbar-brand {
+        &:hover, &:focus {
+            color: inherit;
+        }
+    }
+
+    .menuLinks {
+        justify-content: flex-end;
+        text-transform: uppercase;
+        font-weight: 700;
+        .nav-link {
+            margin-left: 32px;
+            &:hover,&.active {
+                color: darken($light, 10%)
+            }
+        }
+    }
+
+    .navbar-toggler-icon {
+        border-radius: 4px;
+        background-color: $light;
+    }
+
+    .btn.headerButton {
+        @include border-button;
+        margin-left: 32px;
+    }
+}

@@ -1,0 +1,58 @@
+@import "./config";
+
+/* General page styles */
+
+.HomepageCont {
+    height: 100%;
+    margin-top: 120px;
+    text-align: left;
+
+    h2 {
+        font-size: 52px;
+        line-height: 62px;
+        font-weight: bold;
+    }
+    
+    .HomepageSectionCont {
+        height: 100vh;
+        margin: 92px 0;
+    }
+    
+    .HomepageCTACont {
+        @include homepage-cta-cont;
+
+        p {
+            width: 50%;
+        }
+    }
+}
+
+
+/* Dark section */
+.DarkSectionCont {
+    padding-top: 92px;
+}
+
+
+/* Splash section */
+.HomepageSplashCont {
+    padding: 0 140px
+}
+
+.HomepageSplashImage{
+    display: flex;
+    justify-content: center;
+    img {
+        border-radius: 16px;
+    }
+}
+
+.SplashButtonsCont {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 56px
+}
+
+.SplashButton {
+    @include filled-button($green-cta)
+}
