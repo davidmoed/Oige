@@ -5,6 +5,7 @@ import LightSection from "../components/LightSection";
 
 /* CTA sections */
 import SplashCTA from "../components/homepageCTAs/SplashCTA";
+import AutoCTA from "../components/homepageCTAs/AutoCTA";
 
 import "../styles/homepage.scss";
 
@@ -26,7 +27,7 @@ const Homepage = () => {
           header="Liikluskindlustus ja kasko"
           text="Liikluskindlustus on Eestis kohustuslik kindlustus, millega hüvitatakse sinu sõidukiga teistele isikutele või nende varale põhjustatud kahjud.
           Kaskokindlustus on autokindlustus, millega hüvitatakse Sinu sõidukile tekkinud kahju siis, kui põhjustad ise avarii või juhtub autoga mõni muu õnnetus."
-          CTASection={<SplashCTA />}
+          CTASection={<AutoCTA />}
         />
       </div>
     </div>

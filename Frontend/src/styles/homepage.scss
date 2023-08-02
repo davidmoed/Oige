@@ -3,71 +3,114 @@
 /* General page styles */
 
 .HomepageCont {
-    height: 100%;
-    margin-top: 120px;
-    text-align: left;
+  height: 100%;
+  margin-top: 96px;
+  text-align: left;
 
-    h2 {
-        font-size: 52px;
-        line-height: 62px;
-        font-weight: bold;
-    }
-    
-    .HomepageSectionCont {
-        height: 100vh;
-        margin: 46px 0;
-    }
-    
-    .HomepageCTACont {
-        @include homepage-cta-cont;
+  h2 {
+    font-size: 56px;
+    line-height: 64px;
+    font-weight: bold;
+    word-wrap: break-word;
+  }
 
-        p {
-            width: 50%;
-        }
-    }
+  .HomepageSectionCont {
+    height: calc(100vh - 96px);
+    margin: 48px 0;
+  }
+
+  .HomepageCTACont {
+    @include homepage-cta-cont;
+  }
 }
-
 
 /* Dark section */
 .DarkSectionCont {
-    padding-top: 92px;
+  padding-top: 92px;
 }
 
 /* Light section */
 .LightSectionCont {
-    height: 100%;
-    color: $dark;
-    background-color: $light;
+  height: 100%;
+  color: $dark;
+  background-color: $light;
 
-    .LightSectionImgCont {
-        
-        img {
-            max-width: 100%;
-            height: 100%;
-        }
+  .LightSectionImgCont {
+    img {
+      max-width: 100%;
+      height: 100%;
     }
+  }
+  .LightSectionCTACont {
+    padding: 92px 120px;
+  }
 }
 
 /* Splash section */
 .HomepageSplashCont {
-    padding: 0 140px
-}
+  padding: 0 140px;
+  /* TODO: media query to reduce/remove padding on mobile */
+  h2 {
+    z-index: 500;
+  }
 
-.HomepageSplashImage{
+  p {
+    width: 50%;
+  }
+
+  .HomepageSplashImage {
     display: flex;
     justify-content: center;
     img {
-        border-radius: 16px;
+      border-radius: 16px;
     }
-}
+  }
 
-.SplashButtonsCont {
+  .SplashButtonsCont {
     display: flex;
     flex-wrap: wrap;
-    gap: 32px 56px
+    gap: 32px 56px;
+  }
+
+  .SplashButton {
+    @include filled-button($green-cta);
+  }
 }
 
-.SplashButton {
-    @include filled-button($green-cta)
-}
+/* Auto section */
+.AutoCTACont {
+  background-color: $dark;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 0;
+  color: $light;
 
+  .AutoCTAHeader {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  .AutoCTAInput {
+    height: 42px;
+    border: none;
+    border-radius: 16px;
+  }
+
+  .AutoCTAs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    .AutoButton {
+      @include filled-button($orange-cta);
+    }
+  }
+
+  .AutoClearButtonCTA {
+    margin-top: 16px;
+    @include border-button;
+  }
+}

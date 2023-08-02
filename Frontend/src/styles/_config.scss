@@ -1,14 +1,13 @@
 /* Static values */
-$dark: #0C4237;
-$light: #FFFEF3;
+$dark: #0c4237;
+$light: #fffef3;
 $light-hover: #fffde6;
 
-$green-cta: #C7FF9B;
-$orange-cta: #FFC78B;
-
+$green-cta: #c7ff9b;
+$orange-cta: #ffc78b;
 
 /* Theme overwrites */
-$primary:  $light;
+$primary: $light;
 $secondary: $dark;
 
 $body-color: $light;
@@ -21,37 +20,34 @@ $navbar-padding-x: 2rem;
 /* Mixins*/
 
 @mixin border-button {
-    width: 264px;
-    height: 42px;
-    border: 1px solid $light;
-    border-radius: 16px;
-    padding: 9px 45px;
-    color: $light;
-    background-color: $dark;
-    text-transform: uppercase;
+  width: 264px;
+  height: 42px;
+  border: 1px solid $light;
+  border-radius: 16px;
+  padding: 9px 20px;
+  color: $light;
+  background-color: $dark;
+  text-transform: uppercase;
 }
 
 @mixin filled-button($theme) {
-    width: 224px;
-    height: 42px;
-    border: none;
-    border-radius: 16px;
-    padding: 9px 45px;
-    color: $dark;
-    background-color: $theme;
-    &:hover {
-        background-color: darken($theme, 10%);
-    }
+  width: 224px;
+  height: 42px;
+  border: none;
+  border-radius: 16px;
+  padding: 9px 20px;
+  color: $dark;
+  background-color: $theme;
+  &:hover {
+    background-color: darken($theme, 10%);
+  }
 }
 
 @mixin homepage-cta-cont {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-
-
-
 /* Required */
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
