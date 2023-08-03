@@ -15,7 +15,8 @@
   }
 
   .HomepageSectionCont {
-    height: calc(100vh - 96px);
+    // height: calc(100vh - 96px);
+    height: 100vh;
     margin: 48px 0;
   }
 
@@ -34,6 +35,8 @@
   height: 100%;
   color: $dark;
   background-color: $light;
+  display: flex;
+  align-items: center;
 
   .LightSectionImgCont {
     img {
@@ -42,7 +45,7 @@
     }
   }
   .LightSectionCTACont {
-    padding: 92px 120px;
+    padding: 0 120px;
   }
 }
 

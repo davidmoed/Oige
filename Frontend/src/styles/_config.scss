@@ -41,6 +41,9 @@ $navbar-padding-x: 2rem;
   &:hover {
     background-color: darken($theme, 10%);
   }
+  &.active {
+    background-color: darken($theme, 10%);
+  }
 }
 
 @mixin homepage-cta-cont {
