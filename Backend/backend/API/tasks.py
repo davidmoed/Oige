@@ -3,9 +3,17 @@ import redis
 import requests 
 
 r = redis.StrictRedis(host='localhost', port=6379, db=0)
+# TODO: This only saves for now, need to add the API call to the insurance provider
 @shared_task
 def save_car_details(registration):
     r.hset('car:' + registration)
+    return "Saved"
+
+
+# TODO: Add the rest of the save functions
+@shared_task
+def personal_details(user_details):
+    r.hset('user:' + user_details)
     return "Saved"
 
 @shared_task
