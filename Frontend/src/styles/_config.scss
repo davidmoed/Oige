@@ -6,6 +6,8 @@ $light-hover: #fffde6;
 $green-cta: #c7ff9b;
 $orange-cta: #ffc78b;
 
+$isFilled: true;
+
 /* Theme overwrites */
 $primary: $light;
 $secondary: $dark;
@@ -30,18 +32,24 @@ $navbar-padding-x: 2rem;
   text-transform: uppercase;
 }
 
-@mixin filled-button($theme) {
+@mixin cta-button($theme, $isFilled) {
   width: 224px;
   height: 42px;
   border: none;
   border-radius: 16px;
   padding: 9px 20px;
   color: $dark;
-  background-color: $theme;
-  &:hover {
-    background-color: darken($theme, 10%);
+  @if $isFilled == true {
+    background-color: $theme;
+  } @else {
+    border: 1px solid $theme;
+    color: $theme;
+    background-color: transparent;
   }
-  &.active {
+  &.active,
+  &:hover {
+    color: $dark;
+    border: none;
     background-color: darken($theme, 10%);
   }
 }
