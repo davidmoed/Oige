@@ -20,14 +20,33 @@
     margin: 48px 0;
   }
 
+  .HomepageEdgeImgCont {
+    img {
+      max-width: 100%;
+      height: 100%;
+    }
+  }
+
   .HomepageCTACont {
-    @include homepage-cta-cont;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .HomepageCTAHeader {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 4px;
   }
 }
 
 /* Dark section */
 .DarkSectionCont {
   padding-top: 92px;
+  .darkSectionStartInsuringCTA {
+    margin-top: 16px;
+    @include start-insuring-button($theme: light);
+  }
 }
 
 /* Light section */
@@ -38,23 +57,22 @@
   display: flex;
   align-items: center;
 
-  .LightSectionImgCont {
-    img {
-      max-width: 100%;
-      height: 100%;
-    }
-  }
   .LightSectionCTACont {
     padding: 0 120px;
+    .lightSectionStartInsuringCTA {
+      margin-top: 16px;
+      @include start-insuring-button($theme: light);
+    }
   }
 }
 
 /* Splash section */
 .HomepageSplashCont {
   padding: 0 140px;
-  /* TODO: media query to reduce/remove padding on mobile */
+  //TODO: media query to reduce/remove padding on mobile, change word-wrap rules
   h2 {
     z-index: 500;
+    margin-right: 48px;
   }
 
   p {
@@ -80,8 +98,8 @@
   }
 }
 
-/* Auto section */
-.AutoCTACont {
+/* auto section */
+.autoCTACont {
   background-color: $dark;
   border-radius: 16px;
   display: flex;
@@ -90,30 +108,62 @@
   padding: 48px 0;
   color: $light;
 
-  .AutoCTAHeader {
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 4px;
-  }
-
-  .AutoCTAInput {
+  .autoCTAInput {
     height: 42px;
     border: none;
     border-radius: 16px;
+    padding: 4px 32px;
   }
 
-  .AutoCTAs {
+  .autoCTAs {
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 10px;
-    .AutoButton {
+    .autoButton {
       @include cta-button($orange-cta, $isFilled: false);
     }
   }
+}
 
-  .AutoClearButtonCTA {
-    margin-top: 16px;
-    @include border-button;
+/* Travel section */
+.HomepageTravelCont {
+  .HomepageCTACont {
+    display: flex;
+    flex-direction: column;
+    padding: 0 120px;
+    .travelCTACont {
+      background-color: $light;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 0;
+      color: $dark;
+      .travelCTAs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        color: $light;
+        background-color: $dark;
+        border-radius: 16px;
+        margin: 8px 24px;
+        padding: 32px 0;
+        .travelButtonGroup {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          .travelButtonText {
+            font-weight: bold;
+            text-align: center;
+            max-width: 224px;
+          }
+          .travelButton {
+            @include cta-button($orange-cta, $isFilled: false);
+          }
+        }
+      }
+    }
   }
 }

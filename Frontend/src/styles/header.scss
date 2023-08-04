@@ -34,7 +34,7 @@
   }
 
   .btn.headerButton {
-    @include border-button;
+    @include start-insuring-button($theme: "light");
     margin-left: 32px;
   }
 }

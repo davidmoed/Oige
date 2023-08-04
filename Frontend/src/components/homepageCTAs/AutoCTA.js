@@ -6,73 +6,42 @@ const AutoCTA = () => {
   const [insuranceType, setInsuranceType] = useState("");
 
   return (
-    <div className="AutoCTACont">
-      <p className="AutoCTAHeader">sõiduki number</p>
+    <div className="autoCTACont">
+      <p className="HomepageCTAHeader">sõiduki number</p>
       <input
-        className="AutoCTAInput"
+        className="autoCTAInput"
         value={carRegistrationVal}
-        onChange={(e) => setCarRegistrationVal(e.target.value)}
+        onChange={(e) => setCarRegistrationVal(e.target.value?.toUpperCase())}
       />
       <p>Väli ei ole kohustuslik</p>
-      <div className="AutoCTAs">
+      <div className="autoCTAs">
         <Button
-          className="AutoButton"
+          className="autoButton"
           active={insuranceType === "Liikluskindlustus"}
           onClick={() => setInsuranceType("Liikluskindlustus")}
         >
           Liikluskindlustus
         </Button>
         <Button
-          className="AutoButton"
+          className="autoButton"
           active={insuranceType === "Kaskokindlustus"}
           onClick={() => setInsuranceType("Kaskokindlustus")}
         >
           Kaskokindlustus
         </Button>
         <Button
-          className="AutoButton"
+          className="autoButton"
           active={insuranceType === "Liiklus + kaskokindlustus"}
           onClick={() => setInsuranceType("Liiklus + kaskokindlustus")}
         >
           Liiklus + kaskokindlustus
         </Button>
       </div>
-      <Button className="AutoClearButtonCTA">alusta kindlustamist</Button>
+      <Button className="lightSectionStartInsuringCTA">
+        alusta kindlustamist
+      </Button>
     </div>
   );
 };
 
 export default AutoCTA;
-
-/*
-<label>
-          <input
-            className="AutoButton"
-            type="radio"
-            value="Liikluskindlustus"
-            checked={insuranceType === "Liikluskindlustus"}
-            onChange={() => setInsuranceType("Liikluskindlustus")}
-          />
-          Liikluskindlustus
-        </label>
-        <label>
-          <input
-            className="AutoButton"
-            type="radio"
-            value="Kaskokindlustus"
-            checked={insuranceType === "Kaskokindlustus"}
-            onChange={() => setInsuranceType("Kaskokindlustus")}
-          />
-          Kaskokindlustus
-        </label>
-        <label>
-          <input
-            className="AutoButton"
-            type="radio"
-            value="Liiklus + kaskokindlustus"
-            checked={insuranceType === "Liiklus + kaskokindlustus"}
-            onChange={() => setInsuranceType("Liiklus + kaskokindlustus")}
-          />
-          Liiklus + kaskokindlustus
-        </label>
-*/

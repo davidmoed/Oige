@@ -14,7 +14,7 @@ const Header = () => {
           <Nav.Link href="/about">About</Nav.Link>
         </Nav>
         <Button className="headerButton" href="/insurance">
-          Insurance stuff
+          alusta kindlustamist
         </Button>
       </Navbar.Collapse>
     </Navbar>

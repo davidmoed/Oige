@@ -21,15 +21,32 @@ $navbar-padding-x: 2rem;
 
 /* Mixins*/
 
-@mixin border-button {
+@mixin start-insuring-button($theme) {
   width: 264px;
   height: 42px;
   border: 1px solid $light;
   border-radius: 16px;
   padding: 9px 20px;
-  color: $light;
-  background-color: $dark;
   text-transform: uppercase;
+  @if ($theme == "light") {
+    color: $light;
+    background-color: $dark;
+
+    &:hover {
+      color: $dark;
+      background-color: $light;
+      border: none;
+    }
+  } @else {
+    color: $dark;
+    background-color: $light;
+
+    &:hover {
+      color: $light;
+      background-color: $dark;
+      border: none;
+    }
+  }
 }
 
 @mixin cta-button($theme, $isFilled) {
@@ -52,12 +69,6 @@ $navbar-padding-x: 2rem;
     border: none;
     background-color: darken($theme, 10%);
   }
-}
-
-@mixin homepage-cta-cont {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 /* Required */
