@@ -7,8 +7,10 @@ import LightSection from "../components/LightSection";
 import SplashCTA from "../components/homepageCTAs/SplashCTA";
 import AutoCTA from "../components/homepageCTAs/AutoCTA";
 import TravelCTA from "../components/homepageCTAs/TravelCTA";
+import HomeCTA from "../components/homepageCTAs/HomeCTA";
 
 import "../styles/homepage.scss";
+import Footer from "../components/Footer";
 
 const Homepage = () => {
   return (
@@ -41,6 +43,16 @@ const Homepage = () => {
           CTASection={<TravelCTA />}
         />
       </div>
+      <div className="HomepageSectionCont HomepageHomeCont">
+        <LightSection
+          img={"https://placehold.co/720x450.png"}
+          header="Kodukindlustus"
+          text="Kodukindlustus hüvitab varalised kahjud, kui Teie kodu või kodus oleva varaga peaks midagi juhtuma.
+          Vali südamerahu ja kindlusta oma kalleim vara!"
+          CTASection={<HomeCTA />}
+        />
+      </div>
+      <Footer />
     </div>
   );
 };

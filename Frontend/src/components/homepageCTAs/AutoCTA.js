@@ -6,7 +6,7 @@ const AutoCTA = () => {
   const [insuranceType, setInsuranceType] = useState("");
 
   return (
-    <div className="autoCTACont">
+    <div className="autoCTACont HomepageCTAArea">
       <p className="HomepageCTAHeader">sõiduki number</p>
       <input
         className="autoCTAInput"

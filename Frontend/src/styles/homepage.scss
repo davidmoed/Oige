@@ -42,7 +42,11 @@
 
 /* Dark section */
 .DarkSectionCont {
-  padding-top: 92px;
+  display: flex;
+  align-items: center;
+  .DarkSectionCTACont {
+    padding: 92px 0;
+  }
   .darkSectionStartInsuringCTA {
     margin-top: 16px;
     @include start-insuring-button($theme: light);
@@ -59,6 +63,15 @@
 
   .LightSectionCTACont {
     padding: 0 120px;
+    .HomepageCTAArea {
+      background-color: $dark;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 0;
+      color: $light;
+    }
     .lightSectionStartInsuringCTA {
       margin-top: 16px;
       @include start-insuring-button($theme: light);
@@ -100,14 +113,6 @@
 
 /* auto section */
 .autoCTACont {
-  background-color: $dark;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 48px 0;
-  color: $light;
-
   .autoCTAInput {
     height: 42px;
     border: none;
@@ -164,6 +169,21 @@
           }
         }
       }
+    }
+  }
+}
+
+/* Home section */
+.HomepageHomeCont {
+  .homeCTAs {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 24px 0;
+    .homeButton {
+      @include cta-button($orange-cta, $isFilled: false);
     }
   }
 }

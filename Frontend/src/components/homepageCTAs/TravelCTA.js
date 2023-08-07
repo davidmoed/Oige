@@ -5,7 +5,7 @@ const TravelCTA = () => {
   const [insuranceType, setInsuranceType] = useState("");
 
   return (
-    <div className="travelCTACont">
+    <div className="travelCTACont HomepageCTAArea">
       <p className="HomepageCTAHeader">Reisi sihtkoht</p>
       <div className="travelCTAs">
         <div className="travelButtonGroup">
