@@ -1,12 +1,9 @@
 /* Static values */
 $dark: #0c4237;
 $light: #fffef3;
-$light-hover: #fffde6;
 
 $green-cta: #c7ff9b;
 $orange-cta: #ffc78b;
-
-$isFilled: true;
 
 /* Theme overwrites */
 $primary: $light;
@@ -24,7 +21,6 @@ $navbar-padding-x: 2rem;
 @mixin start-insuring-button($theme) {
   width: 264px;
   height: 42px;
-  border: 1px solid $light;
   border-radius: 16px;
   padding: 9px 20px;
   text-transform: uppercase;
@@ -65,7 +61,7 @@ $navbar-padding-x: 2rem;
   }
   &.active,
   &:hover {
-    color: $dark;
+    color: $light;
     border: none;
     background-color: darken($theme, 10%);
   }

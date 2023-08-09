@@ -107,7 +107,7 @@
   }
 
   .SplashButton {
-    @include cta-button($green-cta, $isFilled);
+    @include cta-button($green-cta, $isFilled: true);
   }
 }
 
@@ -150,9 +150,6 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
-        color: $light;
-        background-color: $dark;
-        border-radius: 16px;
         margin: 8px 24px;
         padding: 32px 0;
         .travelButtonGroup {
@@ -165,7 +162,13 @@
             max-width: 224px;
           }
           .travelButton {
-            @include cta-button($orange-cta, $isFilled: false);
+            @include cta-button($dark, $isFilled: false);
+            &.active,
+            &:hover {
+              color: $light;
+              border: none;
+              background-color: $dark;
+            }
           }
         }
       }
