@@ -37,4 +37,28 @@
     @include start-insuring-button($theme: "light");
     margin-left: 32px;
   }
+
+  .navbar-toggler {
+    &:active,
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+    .navbar-toggler-icon {
+      background-color: $dark;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navBarCont {
+    padding-top: 24px;
+  }
+  .navbar-collapse.menuLinks {
+    padding: 24px 0;
+    .nav-link,
+    .headerButton {
+      margin: 0;
+    }
+  }
 }

@@ -245,7 +245,10 @@
   .HomepageCont .HomepageEdgeImgCont img,
   .HomepageTravelCont .HomepageEdgeImgCont img {
     border-radius: 8px;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
+  }
+  .HomepageSplashCont .HomepageSplashImage img {
+    margin-bottom: 32px;
   }
 
   .HomepageSplashCont {
@@ -254,10 +257,13 @@
       .HomepageSplashCTASubheader {
         width: 100%;
       }
-      .SplashButtonsCont .SplashButtonRow {
-        justify-content: center;
-        flex-wrap: wrap;
-        row-gap: 32px;
+      .SplashButtonsCont {
+        margin-top: 32px;
+        .SplashButtonRow {
+          justify-content: center;
+          flex-wrap: wrap;
+          row-gap: 32px;
+        }
       }
     }
   }
