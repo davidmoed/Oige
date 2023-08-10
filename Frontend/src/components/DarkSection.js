@@ -5,8 +5,8 @@ const DarkSection = ({ img, imgClass, header, text, CTASection }) => {
   return (
     <Row className="DarkSectionCont">
       <Col md={8} sm={12} className="HomepageCTACont DarkSectionCTACont">
-        <h2>{header}</h2>
-        <p>{text}</p>
+        <h2 className="DarkSectionCTAHeader">{header}</h2>
+        <p className="DarkSectionCTASubheader">{text}</p>
         {CTASection}
       </Col>
       <Col md={4} className={imgClass}>

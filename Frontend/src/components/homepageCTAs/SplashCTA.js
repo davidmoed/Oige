@@ -4,10 +4,14 @@ import { Button } from "react-bootstrap";
 const SplashCTA = () => {
   return (
     <div className="SplashButtonsCont">
-      <Button className="SplashButton">Liikluskindlustus</Button>
-      <Button className="SplashButton">Kasko</Button>
-      <Button className="SplashButton">Kodukindlustus</Button>
-      <Button className="SplashButton">Reisikindlustus</Button>
+      <div className="SplashButtonRow">
+        <Button className="SplashButton">Liikluskindlustus</Button>
+        <Button className="SplashButton">Kasko</Button>
+      </div>
+      <div className="SplashButtonRow">
+        <Button className="SplashButton">Kodukindlustus</Button>
+        <Button className="SplashButton">Reisikindlustus</Button>
+      </div>
     </div>
   );
 };

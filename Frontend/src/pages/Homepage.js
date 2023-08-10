@@ -26,7 +26,7 @@ const Homepage = () => {
       </Container>
       <div className="HomepageSectionCont HomepageAutoCont">
         <LightSection
-          img={"https://placehold.co/720x450.png"}
+          img={"https://placehold.co/650x920.png"}
           header="Liikluskindlustus ja kasko"
           text="Liikluskindlustus on Eestis kohustuslik kindlustus, millega hüvitatakse sinu sõidukiga teistele isikutele või nende varale põhjustatud kahjud.
           Kaskokindlustus on autokindlustus, millega hüvitatakse Sinu sõidukile tekkinud kahju siis, kui põhjustad ise avarii või juhtub autoga mõni muu õnnetus."
@@ -35,7 +35,7 @@ const Homepage = () => {
       </div>
       <div className="HomepageSectionCont HomepageTravelCont">
         <DarkSection
-          img={"https://placehold.co/720x450.png"}
+          img={"https://placehold.co/650x920.png"}
           imgClass={"HomepageEdgeImgCont"}
           header="Reisikindlustus"
           text="Reisikindlustus on vajalik nii puhkuse- kui ärireisile minejale.
@@ -45,7 +45,7 @@ const Homepage = () => {
       </div>
       <div className="HomepageSectionCont HomepageHomeCont">
         <LightSection
-          img={"https://placehold.co/720x450.png"}
+          img={"https://placehold.co/650x920.png"}
           header="Kodukindlustus"
           text="Kodukindlustus hüvitab varalised kahjud, kui Teie kodu või kodus oleva varaga peaks midagi juhtuma.
           Vali südamerahu ja kindlusta oma kalleim vara!"

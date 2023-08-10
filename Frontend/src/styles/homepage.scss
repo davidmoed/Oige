@@ -6,6 +6,9 @@
   height: 100%;
   margin-top: 96px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h2 {
     font-size: 56px;
@@ -15,15 +18,21 @@
   }
 
   .HomepageSectionCont {
-    // height: calc(100vh - 96px);
-    height: 100vh;
-    margin: 48px 0;
+    width: 100%;
   }
 
   .HomepageEdgeImgCont {
+    height: 100%;
+    padding: 0;
     img {
       max-width: 100%;
       height: 100%;
+      margin-left: -100px;
+    }
+    @media (max-width: 768px) {
+      .HomepageEdgeImgCont {
+        margin-left: 0;
+      }
     }
   }
 
@@ -44,8 +53,12 @@
 .DarkSectionCont {
   display: flex;
   align-items: center;
+  height: 100vh;
+
   .DarkSectionCTACont {
-    padding: 92px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .darkSectionStartInsuringCTA {
     margin-top: 16px;
@@ -55,11 +68,17 @@
 
 /* Light section */
 .LightSectionCont {
-  height: 100%;
+  min-height: 100%;
+  width: 100%;
   color: $dark;
   background-color: $light;
   display: flex;
   align-items: center;
+  margin: 0;
+  height: 100vh;
+  &.row {
+    margin: 0;
+  }
 
   .LightSectionCTACont {
     padding: 0 120px;
@@ -81,33 +100,40 @@
 
 /* Splash section */
 .HomepageSplashCont {
-  padding: 0 140px;
-  //TODO: media query to reduce/remove padding on mobile, change word-wrap rules
-  h2 {
-    z-index: 500;
-    margin-right: 48px;
-  }
+  display: flex;
+  .DarkSectionCTACont {
+    .DarkSectionCTAHeader {
+      z-index: 500;
+      margin-right: 48px;
+      margin-bottom: 16px;
+    }
 
-  p {
-    width: 50%;
-  }
+    .DarkSectionCTASubheader {
+      font-size: 20px;
+      width: 50%;
+      margin-bottom: 32px;
+    }
 
+    .SplashButtonsCont {
+      display: flex;
+      flex-direction: column;
+      row-gap: 32px;
+      .SplashButtonRow {
+        display: flex;
+        width: 100%;
+        column-gap: 64px;
+        .SplashButton {
+          @include cta-button($green-cta, $isFilled: true);
+        }
+      }
+    }
+  }
   .HomepageSplashImage {
     display: flex;
     justify-content: center;
     img {
       border-radius: 16px;
     }
-  }
-
-  .SplashButtonsCont {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px 56px;
-  }
-
-  .SplashButton {
-    @include cta-button($green-cta, $isFilled: true);
   }
 }
 
@@ -171,6 +197,18 @@
             }
           }
         }
+      }
+    }
+  }
+  .HomepageEdgeImgCont {
+    display: flex;
+    justify-content: flex-end;
+    img {
+      margin-right: -100px;
+    }
+    @media (max-width: 768px) {
+      .HomepageEdgeImgCont img {
+        margin-right: 0;
       }
     }
   }
