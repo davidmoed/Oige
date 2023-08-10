@@ -6,12 +6,13 @@
   padding: 64px 0 32px;
   .footerLogoCont {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
   .footerBottomCont {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-top: 64px;
@@ -35,6 +36,21 @@
     .footerBottomLogo {
       display: flex;
       justify-content: flex-end;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footerCont {
+    padding: 24px;
+    .footerBottomCont {
+      .footerLinkCont {
+        justify-content: space-around;
+      }
+      .footerBottomLogo {
+        margin-top: 24px;
+        justify-content: center;
+      }
     }
   }
 }
