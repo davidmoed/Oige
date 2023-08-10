@@ -1,0 +1,40 @@
+@import "./config";
+
+.footerCont {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0;
+  .footerLogoCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footerBottomCont {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 64px;
+    .footerLinkCont {
+      display: flex;
+      justify-content: space-between;
+      .footerLinkArea {
+        display: flex;
+        flex-direction: column;
+        .footerLinkHeader {
+          font-weight: bold;
+        }
+        .footerLink {
+          text-decoration: none;
+          &:hover {
+            color: darken($light, 10%);
+          }
+        }
+      }
+    }
+    .footerBottomLogo {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
