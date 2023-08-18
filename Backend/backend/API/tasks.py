@@ -107,4 +107,23 @@ def fetch_travel_insurance_quote(geographic_area, user_details):
     print(response.json()) # Temp holding and testing
     return response.json() # Temp holding and testing
 
-
+"""
+@shared_task
+def request_house_insurance():
+    # API logic for house insurance quote request
+    expected details:
+    - address
+    - house type
+    - house size
+    - house age
+    - house usage
+    - building material
+    - security
+    - house renovations
+    - building size
+    - building height (floors)
+    - which floor the apartment is on
+    - mortgage provider
+    
+    pass
+"""
